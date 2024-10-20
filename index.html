@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>My Portfolio Website</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebee;
+            /* Background color */
+            overflow: hidden;
+            /* Prevent scrollbars */
+        }
+
+        header {
+            background-color: #e97fa6;
+            /* Header color */
+            padding: 10px 20px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            /* Shadow for the header */
+            position: relative;
+            /* Relative positioning for overlay */
+            z-index: 10;
+            /* Ensure header is above the image */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo h2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav_links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav_links li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav_links li a:hover {
+            color: #ffebee;
+            /* Text color on hover */
+        }
+
+        /* Social media icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            /* Spacing between icons */
+        }
+
+        .social-icons a {
+            color: white;
+            /* Icon color */
+            font-size: 20px;
+            /* Icon size */
+            transition: color 0.3s;
+            /* Transition effect */
+        }
+
+        .social-icons a:hover {
+            color: #ffebee;
+            /* Hover color */
+        }
+
+        /* Home page styles */
+        #Homepage {
+            position: relative;
+            /* For absolute positioning of child elements */
+            height: 100vh;
+            /* Full viewport height */
+            overflow: hidden;
+            /* Prevent overflow */
+        }
+
+        .inner_homepage {
+            position: absolute;
+            /* Positioning to overlay text */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Center text */
+            text-align: center;
+            /* Center text */
+            color: white;
+            /* Text color */
+        }
+
+        .child_homepage h1 {
+            font-size: 80px;
+            /* Increase title size */
+            font-family: 'Montserrat', sans-serif;
+            /* Change font to Montserrat */
+            color: #ffffff;
+            /* Title color */
+            margin: 0;
+            /* Remove margin */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Text shadow for better visibility */
+        }
+
+        .child_homepage .span_child {
+            font-weight: 700;
+            color: #d121a5;
+        }
+
+        .child_homepage img {
+            position: absolute;
+            /* Positioning to fill the section */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Fill the entire viewport */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            z-index: -1;
+            /* Send the image behind text */
+        }
+
+        .cta-button {
+            background-color: #d121a5;
+            /* Button color */
+            color: white;
+            /* Button text color */
+            padding: 10px 20px;
+            /* Button padding */
+            text-decoration: none;
+            /* Remove underline */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s;
+            /* Smooth transition */
+            font-size: 20px;
+            /* Button text size */
+            margin-top: 20px;
+            /* Space above button */
+        }
+
+        .cta-button:hover {
+            background-color: #bf268c;
+            /* Darker shade on hover */
+        }
+
+        footer {
+            background-color: #e97fa6;
+            /* Footer color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+            /* Footer positioning */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2><a href="#">Gizem Toma</a></h2>
+            </div>
+            <ul class="nav_links">
+                <li><a href="#Homepage">Homepage</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="survey.html">Survey</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:your-email@example.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="Homepage">
+        <div class="child_homepage">
+            <img src="blog.jpg" alt="A welcoming blog image">
+            <br><br><br>
+            <h1>WELCOME TO <br>
+                <span class="span_child">MY BLOG</span>
+            </h1>
+            <a href="about_me.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gizem Toma. All rights reserved.</p>
+    </footer>
+
+    <!-- Font Awesome script for icons -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

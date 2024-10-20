@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Anketleri</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS dosyası bağlantısı -->
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            /* Yazı tipi ayarı */
+            background-color: #f8f9fa;
+            /* Arka plan rengi */
+            margin: 0;
+            /* Varsayılan margin kaldırıldı */
+            padding: 20px;
+            /* Sayfanın kenarlarından iç boşluk */
+        }
+
+        /* Anasayfa bölümü */
+        #Homepage {
+            max-width: 600px;
+            /* Anketin maksimum genişliği */
+            margin: auto;
+            /* Ortalamak için */
+            padding: 20px;
+            /* İç boşluk */
+            background-color: white;
+            /* Arka plan rengi */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Gölgelendirme efekti */
+        }
+
+        /* Başlık stil ayarları */
+        h1 {
+            text-align: center;
+            /* Başlığı ortala */
+            color: #333;
+            /* Başlık rengi */
+        }
+
+        h2 {
+            text-align: center;
+            /* İkinci başlığı ortala */
+            color: #555;
+            /* İkinci başlık rengi */
+        }
+
+        /* Form grubu stil ayarları */
+        .form-group {
+            margin-bottom: 15px;
+            /* Gruplar arası boşluk */
+        }
+
+        /* Etiket stil ayarları */
+        label {
+            display: block;
+            /* Etiketleri blok halinde göster */
+            margin-bottom: 5px;
+            /* Etiket ile giriş alanı arası boşluk */
+            font-weight: bold;
+            /* Kalın yazı */
+        }
+
+        /* Radyo butonu ve checkbox stil ayarları */
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            /* Radyo butonları ile metin arası boşluk */
+        }
+
+        /* Buton stil ayarları */
+        button {
+            display: block;
+            /* Butonu ortalamak için blok yap */
+            width: 100%;
+            /* Butonun genişliği */
+            padding: 10px;
+            /* Buton içi boşluk */
+            background-color: #f3a9e4;
+            /* Buton rengi */
+            color: white;
+            /* Yazı rengi */
+            border: none;
+            /* Kenar çizgisi yok */
+            border-radius: 5px;
+            /* Kenar yuvarlama */
+            font-size: 16px;
+            /* Yazı boyutu */
+            cursor: pointer;
+            /* Fare ile üzerine gelince gösterilecek işaretçi */
+        }
+
+        /* Buton hover durumu */
+        button:hover {
+            background-color: #0056b3;
+            /* Hover durumu için renk değişimi */
+        }
+
+        /* Anket span rengi */
+        .span_child {
+            color: #bb1dae;
+            /* Span rengi */
+            font-weight: bold;
+            /* Kalın yazı */
+        }
+    </style>
+</head>
+
+<body>
+    <!---ANASAYFA---->
+    <section id="Homepage">
+        <div class="inner_homepage">
+            <h1>WELCOME TO <br>
+                <span class="span_child">MY BLOG</span>
+            </h1>
+
+            <!-- Tek Seçenekli Anket -->
+            <h2>Did you like my blog?</h2>
+            <form id="like-form">
+                <div class="form-group">
+                    <label for="like-yes">
+                        <input type="radio" id="like-yes" name="like" value="yes"> YES
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="like-no">
+                        <input type="radio" id="like-no" name="like" value="no"> NO
+                    </label>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+
+            <!-- Birden Fazla Seçenekli Anket -->
+            <h2>Your Favorite Foods</h2>
+            <form id="food-form">
+                <div class="form-group">
+                    <label for="food-pizza">
+                        <input type="checkbox" id="food-pizza" name="favoriteFood" value="pizza"> Pizza
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="food-burger">
+                        <input type="checkbox" id="food-burger" name="favoriteFood" value="burger"> Burger
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="food-sushi">
+                        <input type="checkbox" id="food-sushi" name="favoriteFood" value="sushi"> Suşi
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="food-pasta">
+                        <input type="checkbox" id="food-pasta" name="favoriteFood" value="pasta"> Pasta
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="food-salad">
+                        <input type="checkbox" id="food-salad" name="favoriteFood" value="salad"> Salad
+                    </label>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
